@@ -1,6 +1,7 @@
 package com.example.hotelservice.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -40,8 +41,8 @@ public class Hotel implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "rating")
-    private Double rating;
+    @Column(name = "ratings")
+    private List<Rating> ratings;
 
     @PrePersist
     protected void onCreate() {
